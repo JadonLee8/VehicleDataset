@@ -83,7 +83,6 @@ def main(filename, cars, years):
 
                 review = Review(title, car_name, car_year, review_text, rating)
                 reviews.append(review)
-                print(review)
                 
                 # Write review to CSV immediately
                 writer.writerow(review.convert_to_tuple())
@@ -106,3 +105,6 @@ def main(filename, cars, years):
     #     phone = pickle.load(f)
     #     for p in phone:
     #         print(p)
+
+if __name__ == "__main__":
+    main()
