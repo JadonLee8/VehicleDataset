@@ -83,6 +83,7 @@ def main(filename, cars, years):
 
                 review = Review(title, car_name, car_year, review_text, rating)
                 reviews.append(review)
+                print(review)
                 
                 # Write review to CSV immediately
                 writer.writerow(review.convert_to_tuple())
