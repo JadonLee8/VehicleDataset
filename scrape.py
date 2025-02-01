@@ -21,7 +21,7 @@ class Review:
     def __str__(self):
         return f"{self.title} - {self.car_name} {self.car_year} - {self.rating}/5 stars\n{self.review_text}"
 
-def main(filename, cars, years):
+def main():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
     # base url for the toyota reviews
