@@ -22,7 +22,12 @@ class Review:
         return f"{self.title} - {self.car_name} {self.car_year} - {self.rating}/5 stars\n{self.review_text}"
 
 def main():
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")  # Run without UI
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     # base url for the toyota reviews
     base_url = "https://www.edmunds.com/toyota"
