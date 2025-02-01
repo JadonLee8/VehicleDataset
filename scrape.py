@@ -23,9 +23,9 @@ class Review:
 
 def main():
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")  # Run without UI
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--headless")  # Run without UI
+    # options.add_argument("--no-sandbox")
+    # options.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
@@ -66,6 +66,7 @@ def main():
             url = f"{base_url}/{car}/{year}/consumer-reviews/?pagesize=50"
             car_name = car
             car_year = year
+            print(url)
 
             driver.get(url)
 

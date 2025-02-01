@@ -5,3 +5,9 @@ lib
 lib64
 
 pyvenv.cfg
+
+reviews.csv
+
+car_specs.csv
+
+db.pickle
